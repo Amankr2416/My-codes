@@ -1,0 +1,20 @@
+int m,A[10],i,j,temp;
+printf("enter the value of m, less than or equal to 10\n");
+scanf("%d",&m);
+printf("enter the element of the list :\n");
+for(i=0;i<m;i++) {
+    scanf("%d",&A[i]);
+}
+for(j=1;j<=m-1;j++){
+    for(i=0;i<=m-i-1;i++){
+        if(A[i]>A[i+1]){
+            temp=A[i];
+            A[i]=A[i+1];
+            A[i+1]=temp;
+        }
+    }
+}
+        printf("the elements in ascending order :\n");
+    for(i=0;i<m;i++){
+        printf("%d \t",A[i]);
+    }
