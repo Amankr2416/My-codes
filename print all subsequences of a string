@@ -1,0 +1,17 @@
+public static void printSub(String str,int idx,String newString){
+
+    if(idx==str.length()){
+        System.out.println(newString);
+        return;
+    }
+  char currChar=str.charAt(idx);
+
+  //to be
+  printSub(str,idx+1,newString+currChar);
+  //not to be
+  printSub(str,idx+1,newString);
+}
+public static void main(String args[]){
+ String str="abc";
+ printSub(str,0," ");
+}
